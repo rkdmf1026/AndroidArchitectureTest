@@ -1,6 +1,9 @@
 package com.example.mvc.model
 
 //data class MainDao(val totalCount : Int, val items : List<item>)
+data class MainDao(val response: response)
+data class response(val body: body, val header: header)
+data class header(val resultMsg : String, val resultCode: String)
 data class body(val totalCount: Int, val items: List<item>, val pageNo : Int, val numOfRows : Int)
 data class item(val dataTime : String,
                 val so2Value : String,

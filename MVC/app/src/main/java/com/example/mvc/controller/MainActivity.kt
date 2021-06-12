@@ -1,21 +1,14 @@
-package com.example.mvc
+package com.example.mvc.controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.util.Log
-import android.widget.Button
-import android.widget.Toast
-import androidx.viewbinding.BuildConfig
 import com.example.mvc.databinding.ActivityMainBinding
-import com.example.mvc.model.MainApi
 import com.example.mvc.model.MainService
-import com.example.mvc.model.body
-import com.example.mvc.model.item
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import retrofit2.Response
 import java.lang.Exception
 
 class MainActivity : AppCompatActivity() {
@@ -41,9 +34,9 @@ class MainActivity : AppCompatActivity() {
                         binding.stationName.text.toString(),
                         "DAILY",
                         1.0
-                    ).body()!!.items[0]
-                    binding.pm10.text = info.pm10Value.toString()
-                    binding.pm10Grade.text = info.pm10Grade.toString()
+                    ).body()!!.response.body.items[0]
+                    binding.pm10.text = info.pm10Value
+                    binding.pm10Grade.text = info.pm10Grade
 
                 } catch (e: Exception) {
                     Log.e("network error", e.toString())
