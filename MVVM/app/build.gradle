@@ -3,16 +3,17 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
 }
-
 def localProperties = new Properties()
 localProperties.load(new FileInputStream(rootProject.file("local.properties")))
 
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
-
+    dataBinding {
+        enabled true
+    }
     defaultConfig {
-        applicationId "com.example.mvc"
+        applicationId "com.example.mvvm"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
@@ -20,7 +21,6 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField "String", "airKoreaKey", localProperties['airKoreaKey']
-
     }
 
     buildTypes {
@@ -36,14 +36,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-
-    buildFeatures {
-        viewBinding = true
-    }
 }
 
 dependencies {
-
     def retrofit_version ="2.9.0"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -61,4 +56,5 @@ dependencies {
     //Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
 }

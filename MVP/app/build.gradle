@@ -12,7 +12,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.mvc"
+        applicationId "com.example.mvp"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
@@ -20,7 +20,6 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField "String", "airKoreaKey", localProperties['airKoreaKey']
-
     }
 
     buildTypes {
@@ -43,7 +42,6 @@ android {
 }
 
 dependencies {
-
     def retrofit_version ="2.9.0"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

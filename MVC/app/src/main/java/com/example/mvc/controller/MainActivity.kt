@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
                         "DAILY",
                         1.0
                     ).body()!!.response.body.items[0]
+                    binding.textTime.text= info.dataTime
                     binding.pm10.text = info.pm10Value
                     binding.pm10Grade.text = info.pm10Grade
 
