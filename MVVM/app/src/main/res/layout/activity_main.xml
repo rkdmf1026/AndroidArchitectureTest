@@ -25,8 +25,7 @@
                 android:id="@+id/editName"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="@={viewModel.stationName}">
-            </EditText>
+                android:text="@={viewModel.stationName}"/>
 
             <Button
                 android:id="@+id/btnSearch"
@@ -34,9 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:text="검색"
-                android:onClick="@{() -> viewModel.callItem()}">
-
-            </Button>
+                android:onClick="@{() -> viewModel.callItem()}"/>
 
         </LinearLayout>
 
@@ -49,15 +46,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="측정일">
-            </TextView>
+                android:text="측정일"/>
 
             <TextView
                 android:id="@+id/textTime"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="@{viewModel.item.dataTime}">
-            </TextView>
+                android:text="@{viewModel.item.dataTime}"/>
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -68,15 +64,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="미세먼지 농도">
-            </TextView>
+                android:text="미세먼지 농도"/>
 
             <TextView
                 android:id="@+id/pm10"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="@{viewModel.item.pm10Value}">
-            </TextView>
+                android:text="@{viewModel.item.pm10Value}"/>
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -87,15 +82,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="미세먼지 지수">
-            </TextView>
+                android:text="미세먼지 지수"/>
 
             <TextView
                 android:id="@+id/pm10Grade"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="@{viewModel.item.pm10Grade}">
-            </TextView>
+                android:text="@{viewModel.item.pm10Grade}"/>
+
         </LinearLayout>
 
     </LinearLayout>

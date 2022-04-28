@@ -6,7 +6,7 @@ import com.example.mvp.databinding.ActivityMainBinding
 
 class MainViewImpl(private val binding : ActivityMainBinding) : MainView{
     override fun showResult(item: item) {
-        binding.textTime.text = item.dataTime.toString()
+        binding.textTime.text = item.dataTime
         binding.pm10.text = item.pm10Value
         binding.pm10Grade.text = item.pm10Grade
     }
