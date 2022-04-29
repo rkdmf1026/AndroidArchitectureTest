@@ -11,6 +11,7 @@ private const val BASE_URL =
     "http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/"
 
 val gson = GsonBuilder().setLenient().create()
+
 private val retrofit = Retrofit.Builder()
     .addConverterFactory(GsonConverterFactory.create(gson))
     .baseUrl(BASE_URL)
@@ -21,3 +22,4 @@ object MainService {
         retrofit.create(MainApi::class.java)
     }
 }
+

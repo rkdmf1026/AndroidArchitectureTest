@@ -10,8 +10,8 @@ interface MainApi {
 
     @GET("getMsrstnAcctoRltmMesureDnsty")
      suspend fun listAir(
-        @Query("serviceKey",encoded = true) serviceKey: String,
         @Query("returnType") returnType: String,
+        @Query("serviceKey",encoded = true) serviceKey: String,
         @Query("numOfRows") numOfRows: Int,
         @Query("pageNo") pageNo: Int,
         @Query("stationName") stationName: String,

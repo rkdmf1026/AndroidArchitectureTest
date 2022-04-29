@@ -1,10 +1,11 @@
-package com.example.mvp.view
+package com.example.mvp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.mvp.databinding.ActivityMainBinding
 import com.example.mvp.presenter.MainPresenterImpl
 import com.example.mvp.presenter.MainPresenter
+import com.example.mvp.view.MainViewImpl
 
 class MainActivity : AppCompatActivity() {
     private val binding: ActivityMainBinding by lazy { ActivityMainBinding.inflate(layoutInflater) }
@@ -21,5 +22,4 @@ class MainActivity : AppCompatActivity() {
             mainPresenter.callItem(binding.stationName.text.toString())
         }
     }
-
 }
